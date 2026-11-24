@@ -3,15 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My App</title>
+    <title>HCube Games</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 20px;
+            margin: 0;
+            color: #1d1f24;
+            background: #fff;
         }
-        img {
-            width: 200px; /* Adjust image size */
+        .games {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 24px;
+        }
+        .game {
+            width: 260px;
+        }
+        .game img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
             border-radius: 10px;
         }
         .btn {
@@ -24,23 +39,46 @@
             font-size: 18px;
             margin-top: 10px;
         }
+        .soon {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-top: 10px;
+            background: #eceef1;
+            color: #5b606b;
+        }
+        .small {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #5b606b;
+        }
     </style>
 </head>
 <body>
 
-    <h1>Welcome to My App!</h1>
-    
-    <p>Check out my app on the Play Store:</p>
+    <h1>HCube Games</h1>
+    <p>Our games on the Play Store:</p>
 
-    <!-- Replace with your actual image -->
-    <img src="icon_512.png" alt="App Preview">
+    <div class="games">
+        <div class="game">
+            <img src="icon_512.png" alt="TinyBud icon">
+            <h2>TinyBud</h2>
+            <a class="btn" href="https://play.google.com/store/apps/details?id=com.hcube.tinybud" target="_blank">
+                Download on Google Play
+            </a>
+        </div>
 
-    <br>
-
-    <!-- Replace with your actual Play Store link -->
-    <a class="btn" href="https://play.google.com/store/apps/details?id=com.hcube.tinybud" target="_blank">
-        Download on Google Play
-    </a>
+        <div class="game">
+            <img src="7-of-hearts-icon.png" alt="7 of Hearts icon">
+            <h2>7 of Hearts</h2>
+            <!-- When the game is live, replace this span with:
+                 <a class="btn" href="https://play.google.com/store/apps/details?id=com.hcube.hearts7" target="_blank">Download on Google Play</a> -->
+            <span class="soon">Coming soon</span>
+            <a class="small" href="7-of-hearts-privacy.html">Privacy policy</a>
+        </div>
+    </div>
 
 </body>
 </html>
